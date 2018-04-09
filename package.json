@@ -1,0 +1,22 @@
+{
+  "name": "oficina5-backend",
+  "version": "1.0.0",
+  "description": "Project destined to development test at Oficina5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API",
+    "NodeJs"
+  ],
+  "author": "leonamquintao@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  }
+}
