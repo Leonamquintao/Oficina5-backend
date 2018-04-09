@@ -1,6 +1,6 @@
 # Oficina5 API
 
-API destinada ao teste de desenvolvimento Oficina5...
+This Project is destined to develoment test in Oficina5
 
 ## Comandos importantes:
 `npm install`
@@ -17,4 +17,4 @@ passando as credenciais do mySql do usuário.
 ## Levantando o Servidor:
 `node index.js`
 
-> Servidor estará rodando na localhost:3000;
+> Servidor estará rodando na localhost:3000
