@@ -64,5 +64,17 @@ const saveNewUser = (credentials) => {
 }
 
 // -------------------------------------------------------------------------- //
+const validateToken = (token) => {
+  return new Promise((resolve, reject) => {
+    cn.query(`SELECT COUNT(id) FROM users WHERE api_token = ?`, token, (err, result) => {
+      if(!err && result.length > 0) {
+        resolve()
+      } else {
+        reject('Sem autorização de acesso')
+      }
+    })
+  })
+}
+// -------------------------------------------------------------------------- //
 
-module.exports = { authUser, saveNewUser }
+module.exports = { authUser, saveNewUser, validateToken }

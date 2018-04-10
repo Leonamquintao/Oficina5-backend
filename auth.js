@@ -1,8 +1,7 @@
 const user = require('./app/user/Model/UserModel');
 
-exports.authenticate = function(req,res,next) {
-  user.validateToken(req.get('Authorization'))
-  .then(() =>{
+exports.authenticate = (request, response, next) => {
+  user.validateToken(request.get('Authorization')).then(() => {
     next()
-  }, e => res.status(401).send())
+  }, err => response.status(401).send())
 }
