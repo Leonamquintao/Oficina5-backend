@@ -12,7 +12,7 @@ app.use('/', ...Routes);
 app.listen(port, () => {
   let start = new Date();
   console.log('----------------------------------------------------')
-  console.log(' API running in port: '+port+ '!');
+  console.log(' API running in port: '+port+ ' !');
   console.log(' start at : '+start);
   console.log('----------------------------------------------------')
 });
