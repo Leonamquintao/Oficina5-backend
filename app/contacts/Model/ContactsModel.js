@@ -24,19 +24,27 @@ const saveNewContact = (id, dt) => {
       id, dt.name, dt.birth, dt.phone, dt.email, new Date(dt.created_at)
     ], (err, result) => {
       if(!err) {
-        dt.circle_id = result.insertId;
+        dt.id = result.insertId;
         resolve(dt);
       } else {
         reject(err);
       }
     })
-
   })
 }
 
 const updateContact = (id, cid, dt) => {
   return new Promise((resolve, reject) => {
-
+    let query = `UPDATE contacts SET
+    name = ?, birth = ?, phone = ?, email = ?, updated_at = ?
+    WHERE id = ? AND user_id = ?`;
+    cn.query(query, [dt.name, dt.birth, dt.phone, dt.email, new Date(dt.updated_at), cid, id], (err, result) => {
+      if(!err) {
+        resolve(dt)
+      } else {
+        reject(err)
+      }
+    })
   })
 }
 
